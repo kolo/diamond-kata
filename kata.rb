@@ -1,5 +1,11 @@
 class Kata
+  attr_reader :input
 
-  # code here
+  def initialize(input)
+    @input = input
+  end
 
+  def run
+    input
+  end
 end
