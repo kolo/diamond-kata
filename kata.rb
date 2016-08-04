@@ -11,13 +11,17 @@ class Kata
   end
 
   def run
-    return '' if input < start_char  || input > end_char
+    return '' if out_or_range?
     lines.join("\n")
   end
 
   private
 
   attr_reader :input, :start_char, :end_char
+
+  def out_or_range?
+    input < start_char  || input > end_char
+  end
 
   def lines
     lines = [beautified_line(input)]
